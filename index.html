@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Player - Popular Music</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="music-player">
+        <div class="player-header">
+            <div>
+                <h1>Harmony Player</h1>
+                <p>Top hits from popular artists</p>
+            </div>
+            <div class="player-stats">
+                <div class="stat">
+                    <div class="stat-value" id="song-count">12</div>
+                    <div class="stat-label">Songs</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="total-time">47:32</div>
+                    <div class="stat-label">Total Time</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="album-art">
+            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Album Art">
+        </div>
+        
+        <div class="song-info">
+            <h2 id="song-title">Blinding Lights</h2>
+            <p id="song-artist">The Weeknd</p>
+        </div>
+        
+        <div class="progress-area">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="timer">
+                <span id="current-time">0:00</span>
+                <span id="song-duration">3:20</span>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="prev-btn"><i class="fas fa-step-backward"></i></button>
+            <button id="play-pause-btn" class="play-pause"><i class="fas fa-play"></i></button>
+            <button id="next-btn"><i class="fas fa-step-forward"></i></button>
+        </div>
+        
+        <div class="volume-control">
+            <i class="fas fa-volume-up"></i>
+            <div class="volume-slider">
+                <div class="volume-progress"></div>
+            </div>
+        </div>
+        
+        <div class="now-playing">
+            <i class="fas fa-music"></i>
+            <span>Now Playing: <span id="now-playing-title">Blinding Lights</span></span>
+        </div>
+        
+        <div class="playlist">
+            <h3>Popular Playlist <span>12 songs</span></h3>
+            <div class="playlist-item active">
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Album Art">
+                <div class="playlist-info">
+                    <h4>Blinding Lights</h4>
+                    <p>The Weeknd • 3:20</p>
+                </div>
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Album Art">
+                <div class="playlist-info">
+                    <h4>Levitating</h4>
+                    <p>Dua Lipa • 3:23</p>
+                </div>
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Album Art">
+                <div class="playlist-info">
+                    <h4>Save Your Tears</h4>
+                    <p>The Weeknd • 3:35</p>
+                </div>
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Album Art">
+                <div class="playlist-info">
+                    <h4>Stay</h4>
+                    <p>The Kid LAROI, Justin Bieber • 2:21</p>
+                </div>
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Album Art">
+                <div class="playlist-info">
+                    <h4>Good 4 U</h4>
+                    <p>Olivia Rodrigo • 2:58</p>
+                </div>
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Album Art">
+                <div class="playlist-info">
+                    <h4>Flowers</h4>
+                    <p>Miley Cyrus • 3:20</p>
+                </div>
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Album Art">
+                <div class="playlist-info">
+                    <h4>Kill Bill</h4>
+                    <p>SZA • 2:33</p>
+                </div>
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1511735111819-9a3f7709049c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Album Art">
+                <div class="playlist-info">
+                    <h4>As It Was</h4>
+                    <p>Harry Styles • 2:47</p>
+                </div>
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Album Art">
+                <div class="playlist-info">
+                    <h4>Anti-Hero</h4>
+                    <p>Taylor Swift • 3:20</p>
+                </div>
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Album Art">
+                <div class="playlist-info">
+                    <h4>Unholy</h4>
+                    <p>Sam Smith, Kim Petras • 2:36</p>
+                </div>
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1571974599782-87624638275f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80" alt="Album Art">
+                <div class="playlist-info">
+                    <h4>Heat Waves</h4>
+                    <p>Glass Animals • 3:58</p>
+                </div>
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1511735111819-9a3f7709049c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Album Art">
+                <div class="playlist-info">
+                    <h4>Shivers</h4>
+                    <p>Ed Sheeran • 3:27</p>
+                </div>
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        
+        <div class="settings">
+            <div class="autoplay-toggle">
+                <input type="checkbox" id="autoplay" checked>
+                <label for="autoplay">Autoplay</label>
+            </div>
+            <div class="shuffle-toggle">
+                <input type="checkbox" id="shuffle">
+                <label for="shuffle">Shuffle</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
